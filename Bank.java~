@@ -1,0 +1,73 @@
+import java.util.Scanner;
+class Bank
+{
+   public static void main(String[]args)
+   {
+      CustomerListReferenceBased aQueue = new CustomerListReferenceBased();
+      
+      System.out.println("Enter name of first customer customer");
+      Scanner input=new Scanner(System.in);
+      String name=input.nextLine();
+      System.out.println("Enter time of arrival");
+      int arrive= input.nextInt();
+      System.out.println("Enter time of transaction");
+      int trans= input.nextInt();
+      Customer c= new Customer(name,arrive,trans);
+      aQueue.enqueue(c);
+
+      boolean is=true;
+      while (is)
+      {
+         System.out.println("What would you like to do next");
+         System.out.println("Enter a to add another customer");
+         System.out.println("Enter r to remove the first customer");
+         System.out.println("Enter d to display events");   
+         System.out.println("Enter q to quit");
+         
+         String in=input.nextLine();
+         if(in==a)
+         {
+            System.out.println("Enter name of first customer customer");
+            Scanner input=new Scanner(System.in);
+            String name=input.nextLine();
+            System.out.println("Enter time of arrival");
+            int arrive= input.nextInt();
+            System.out.println("Enter time of transaction");
+            int trans= input.nextInt();
+            //add(name,arrive,trans);
+            Customer c= new Customer(name,arrive,trans);
+            aQueue.enqueue(c);
+         }
+         
+         else if(in==r) aQueue.dequeue();
+         else if(in==d) System.out.print(display); 
+         else break;
+      }
+      
+      public String display()
+      {
+         String z="";
+         while(aQueue.isEmpty==false)
+         {
+            currentTime=aQueue.peek.arrival;
+            if(aQueue.peek.done==false)
+            {
+               if(aQueue.isEmpty==true) z=currentTime+"    "+aQueue.peek()+"enters bank and begins transaction\n";
+               else z=currentTime+"    "+aQueue.peek()+"enters bank and stands at end of line\n";
+               aQueue.peek.done=true;
+            }
+            else
+            {
+               z=z+aQueue.peek+" departs. ";
+               aQueue.dequeue();
+               z=z+aQueue.peek+" begins transaction .";
+            }
+         }
+         return z;
+       }
+  
+    }
+ } 
+
+      
+    

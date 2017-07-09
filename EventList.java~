@@ -1,0 +1,60 @@
+public class EventList
+{
+  private Node firstNode;
+  EventList()
+  {
+    firstNode = null;
+  }
+  isEmpty()
+  {
+    if(firstNode == null)
+      return true;
+    return false;
+  }
+  private Node find(int index)
+  {
+    Node curr = head;
+    for(int skip = 0;skip<index;skip++)
+    {
+      curr = curr.next;
+    }
+    return curr;
+  }
+  public Event get(int index)
+  {
+    if(index>=0 && index<numItems)
+    {
+      Node curr = find(index);
+      Event dataItem = curr.item;
+      return dataItem;
+    }
+    return null;
+  }
+  public void size()
+  {
+    int size = 0;
+    Node curr = firstNode;
+    while(curr!=null)
+    {
+      cur++;
+      curr = curr.next;
+    }
+    return size;
+  }
+  public void insert(Event anEvent)
+  {
+    if(isEmpty())
+      firstNode = newNode(anEvent);
+    //needs more
+  }
+  public void delete()
+  {
+    if(!this.isEmpty())
+      firstNode = firstNode.next;
+  }
+  public Event retrieve()
+  {
+    return firstNode.item;
+  }
+}
+  

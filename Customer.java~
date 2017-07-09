@@ -1,0 +1,31 @@
+class Customer
+{
+   String name;
+   int arrival;
+   int trans;
+   int depart;
+   boolean done;
+   
+   Customer()
+   {
+      name="";
+      arrival=0;
+      trans=0;
+      depart=0;
+      done=false;
+   }
+   
+   Customer(String s,int a, int b)
+   {
+      name=s;
+      arrival=a;
+      trans=b;
+      depart=a+b;
+      done=false;
+   }
+   
+   public String toString()
+   {
+      return name+"   "+arrival+"   "+trans+"   "+depart;
+   }
+}

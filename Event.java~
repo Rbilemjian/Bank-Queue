@@ -1,0 +1,15 @@
+public class Event
+{
+  int initialTime;
+  int requiredTime;
+  Event(int i)
+  {
+    initialTime = i;
+    requiredTime = null;
+  }
+  Event(int i, int r)
+  {
+    initialTime = i;
+    requiredTime = r;
+  }
+}
